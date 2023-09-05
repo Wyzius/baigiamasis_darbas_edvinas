@@ -5,8 +5,11 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -101,5 +104,10 @@ public class Common {
 
     public static void sendKeysToAlert(String message) {
         getAlert().sendKeys(message);
+    }
+
+    public static void waitForElementToBeVisible(By locator) {
+        WebDriverWait wait = new WebDriverWait(Driver.getInstance(), Duration.ofSeconds(8));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 }
