@@ -34,5 +34,16 @@ public class Locators {
                     "//div[@class='hidden lg:flex']//a[contains(text(),'Mano paskyra')]"
             );
         }
+
+        public class HomePage {
+
+            public static By dialogCookies = By.xpath("//div[@id='lgcookieslaw_banner']");
+            public static By acceptCookies = By.xpath(
+                    "//div[@id='lgcookieslaw_banner']//div[@class='lgcookieslaw-button-container']");
+            public static By inputItemsSearch = By.xpath("//input[@id='items-search']");
+            public static By clickOnSearchButton = By.xpath(
+                    "//form[@id='search_widget']//button[@aria-label='Paieška']");
+            public static By itemsOfSearchResults = By.xpath("//div[@id='js-product-list']");
+        }
     }
 }

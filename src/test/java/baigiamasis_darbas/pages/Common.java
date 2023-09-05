@@ -1,10 +1,7 @@
 package baigiamasis_darbas.pages;
 
 import baigiamasis_darbas.utilities.Driver;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -106,8 +103,40 @@ public class Common {
         getAlert().sendKeys(message);
     }
 
+    public static boolean isElementVisible(By locator) {
+        return getElement(locator).isDisplayed();
+    }
+
     public static void waitForElementToBeVisible(By locator) {
         WebDriverWait wait = new WebDriverWait(Driver.getInstance(), Duration.ofSeconds(8));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+    public static boolean waitForElementToBeVisibleAfterCustomised(By locator, int seconds) {
+        int count = 0;
+
+        for (int i = 1; i <= (seconds * 2); i++) {
+            try {
+                Thread.sleep(500);
+                if (isElementVisible(locator)){
+                    return true;
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }catch (NoSuchElementException e){
+                System.out.println("catch counting" + (++count));
+            }
+        }
+        return false;
+    }
+
+    public static List<String> getSearchResults(By locator) {
+        List<WebElement> elements = getElements(locator);
+        List<String> searchResults = new ArrayList<>();
+
+        for (WebElement element : elements){
+            searchResults.add(element.getText().toLowerCase());
+        }
+
+        return searchResults;
     }
 }

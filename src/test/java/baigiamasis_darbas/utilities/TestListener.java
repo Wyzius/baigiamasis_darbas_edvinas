@@ -24,13 +24,13 @@ public class TestListener implements ITestListener {
         TakesScreenshot screenshot = (TakesScreenshot) Driver.getInstance();
         File screenshotFile = screenshot.getScreenshotAs(OutputType.FILE);
 
-        String fileDirectory = "./screenhots/";
+        String fileDirectory = "./screenshots/";
 
         LocalDateTime localDateTime = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy_MM_dd_HH_mm_ss_SSS");
         String dateTime = localDateTime.format(formatter);
 
-        File saveFile = new File(fileDirectory + dateTime +"_screenshot_name.png");
+        File saveFile = new File(fileDirectory + dateTime +"_screenshot.png");
 
         try {
             FileUtils.copyFile(screenshotFile, saveFile);
