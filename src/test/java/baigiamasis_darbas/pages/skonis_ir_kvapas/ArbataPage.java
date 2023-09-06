@@ -12,47 +12,22 @@ public class ArbataPage {
         Common.openUrl("https://www.skonis-kvapas.lt/arbata");
     }
 
-    public static void clickOnCheckbox() {
-        Common.clickOnElement(Locators.SkonisIrKvapas.Arbata.clickOnCategoryCheckbox);
-    }
-
-    public static boolean filteredItems(List<String> checkboxResultCriteria) {
-        Common.waitForElementToBeVisible(Locators.SkonisIrKvapas.Arbata.checkboxFilteredItems);
-        List<String> checkboxResults = Common.getSearchResults(Locators.SkonisIrKvapas.Arbata.checkboxFilteredItems);
-
-        for (String result : checkboxResults) {
-            if (compareResults(result, checkboxResultCriteria)){
-                return false;
-            }
-        }
-        return true;
-    }
-
-    private static boolean compareResults(String result, List<String> resultsCriteria) {
-        for (String criteria : resultsCriteria) {
-            if (!result.contains(criteria)) {
-                return false;
-            }
-        }
-        return true;
-    }
-
     public static void selectItem(String item) {
-        Common.clickOnElement(Locators.SkonisIrKvapas.Arbata.selectItem(item));
+        Common.clickOnElementByAction(Locators.SkonisIrKvapas.Arbata.selectItem(item));
     }
 
     public static void AddWantedItemToCart() {
         Common.waitForElementToBeVisible(Locators.SkonisIrKvapas.Arbata.addItem);
-        Common.clickOnElement(Locators.SkonisIrKvapas.Arbata.addItem);
+        Common.clickOnElementByAction(Locators.SkonisIrKvapas.Arbata.addItem);
     }
 
     public static void moveToPaymentDialog() {
         Common.waitForElementToBeVisible(Locators.SkonisIrKvapas.Arbata.waitForDialog);
-        Common.clickOnElement(Locators.SkonisIrKvapas.Arbata.moveToPayment);
+        Common.clickOnElementByAction(Locators.SkonisIrKvapas.Arbata.buttonDark);
     }
 
     public static String cartItem(String item) {
-        Common.waitForElementToBeVisible(Locators.SkonisIrKvapas.Arbata.visibleCart);
+        Common.waitForElementToBeVisible(Locators.SkonisIrKvapas.Arbata.sectionCart);
         return Common.getTextFromElement(Locators.SkonisIrKvapas.Arbata.cartItemName(item));
     }
 }

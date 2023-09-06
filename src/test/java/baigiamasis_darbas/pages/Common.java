@@ -2,6 +2,7 @@ package baigiamasis_darbas.pages;
 
 import baigiamasis_darbas.utilities.Driver;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -87,5 +88,11 @@ public class Common {
         }
 
         return searchResults;
+    }
+
+    public static void clickOnElementByAction(By locator){
+        WebElement element = getElement(locator);
+        Actions actions = new Actions(Driver.getInstance());
+        actions.moveToElement(element).click().perform();
     }
 }

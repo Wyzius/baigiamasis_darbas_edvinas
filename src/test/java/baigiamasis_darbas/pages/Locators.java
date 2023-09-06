@@ -12,7 +12,7 @@ public class Locators {
             public static By buttonRegister = By.xpath(
                     "//a[@data-link-action='display-register-form text-13px']");
 
-            public static By inputName = By.xpath("//input[@name='firstname']");
+            public static By inputFirstName = By.xpath("//input[@name='firstname']");
 
             public static By inputLastName = By.xpath("//input[@name='lastname']");
 
@@ -22,13 +22,13 @@ public class Locators {
 
             public static By inputPasswordRegister = By.xpath("//input[@type='password']");
 
-            public static By clickOnCheckBoxPolicy = By.xpath("//input[@name='psgdpr']");
+            public static By checkboxPolicyRegister = By.xpath("//input[@name='psgdpr']");
 
-            public static By clickOnSaveCustomer = By.xpath(
+            public static By saveCustomer = By.xpath(
                     "//button[@data-link-action='save-customer']"
             );
 
-            public static By getAlertDanger = By.xpath("//div[@class='help-block']");
+            public static By messageBlock = By.xpath("//div[@class='help-block']");
 
             public static By inputEmailLogin = By.xpath(
                     "//div[@class='col-md-6 w-full']//input[@name='email']"
@@ -38,9 +38,9 @@ public class Locators {
                     "//div[@class='col-md-6 w-full']//input[@name='password']"
             );
 
-            public static By clickOnButtonSubmitLogin = By.xpath("//button[@id='submit-login']");
+            public static By submitLogin = By.xpath("//button[@id='submit-login']");
 
-            public static By getTextMyAccount = By.xpath(
+            public static By paragraphManoPaskyra = By.xpath(
                     "//div[@class='hidden lg:flex']//a[contains(text(),'Mano paskyra')]"
             );
         }
@@ -52,23 +52,21 @@ public class Locators {
             public static By acceptCookies = By.xpath(
                     "//div[@id='lgcookieslaw_banner']//div[@class='lgcookieslaw-button-container']");
 
-            public static By inputItemsSearch = By.xpath("//input[@id='items-search']");
+            public static By itemsSearch = By.xpath("//input[@id='items-search']");
 
-            public static By clickOnSearchButton = By.xpath(
+            public static By buttonSearch = By.xpath(
                     "//form[@id='search_widget']//button[@aria-label='Paieška']");
 
-            public static By itemsOfSearchResults = By.xpath("//div[@id='js-product-list']");
+            public static By productList = By.xpath("//div[@id='js-product-list']");
 
-            public static By clickOnManoPaskyra = By.xpath(
+            public static By paragraphManoPaskyra = By.xpath(
                     "//div[@class='hidden lg:flex']//a[contains(text(),'Mano paskyra')]"
             );
         }
 
         public class Arbata {
-            public static By clickOnCategoryCheckbox = By.xpath(
-                    "//ul[@class='checkbox-filter']//label[contains(text(),'Ulongo arbata')]");
 
-            public static By checkboxFilteredItems = By.xpath("//div[@id='js-product-list']");
+            public static By productList = By.xpath("//div[@id='js-product-list']");
 
             public static By addItem = By.xpath(
                     "//div[@class='add w-full']//button[@aria-label='Į krepšelį']"
@@ -76,11 +74,12 @@ public class Locators {
 
             public static By waitForDialog = By.xpath("//div[@class='modal-footer flex justify-between']");
 
-            public static By moveToPayment = By.xpath(
+            public static By buttonDark = By.xpath(
                     "//div[@class='modal-footer flex justify-between']//a[@class='button button--dark']"
             );
 
-            public static By visibleCart = By.xpath("//section[@class='cart']");
+            public static By sectionCart = By.xpath("//section[@class='cart']");
+            public static By close = By.xpath("//button[@id='lgcookieslaw_accept']");
 
             public static By selectItem(String item) {
                 return By.xpath
@@ -97,13 +96,13 @@ public class Locators {
 
         public class ManoPaskyra {
 
-            public static By clickOnCloseTab = By.xpath("//button[@aria-label='Close']");
-            public static By clickOnInformacija = By.xpath("//a[@id='identity-link']");
+            public static By close = By.xpath("//button[@aria-label='Close']");
+            public static By identityLink = By.xpath("//a[@id='identity-link']");
         }
 
         public class Informacija {
 
-            public static By readAlert = By.xpath("//article[@class='alert alert-success']");
+            public static By messageSuccess = By.xpath("//article[@class='alert alert-success']");
 
             public static By inputFirstName = By.xpath("//input[@name='firstname']");
 
@@ -111,9 +110,9 @@ public class Locators {
 
             public static By inputPassword = By.xpath("//input[@type='password'][1]");
 
-            public static By clickOnCheckboxPolicy = By.xpath("//input[@name='psgdpr']");
+            public static By checkBoxPolicy = By.xpath("//input[@name='psgdpr']");
 
-            public static By clickOnButtonSaveInformation = By.xpath(
+            public static By saveCustomer = By.xpath(
                     "//button[@data-link-action='save-customer']"
             );
         }

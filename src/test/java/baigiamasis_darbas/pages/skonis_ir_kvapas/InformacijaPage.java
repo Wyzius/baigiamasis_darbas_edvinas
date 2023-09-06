@@ -6,8 +6,8 @@ import baigiamasis_darbas.pages.Locators;
 public class InformacijaPage {
 
     public static String readAlert() {
-        Common.waitForElementToBeVisible(Locators.SkonisIrKvapas.Informacija.readAlert);
-        return Common.getTextFromElement(Locators.SkonisIrKvapas.Informacija.readAlert);
+        Common.waitForElementToBeVisible(Locators.SkonisIrKvapas.Informacija.messageSuccess);
+        return Common.getTextFromElement(Locators.SkonisIrKvapas.Informacija.messageSuccess);
     }
 
     public static void inputName(String text) {
@@ -25,10 +25,10 @@ public class InformacijaPage {
     }
 
     public static void clickOnCheckBoxPolicy() {
-        Common.clickOnElement(Locators.SkonisIrKvapas.Informacija.clickOnCheckboxPolicy);
+        Common.clickOnElement(Locators.SkonisIrKvapas.Informacija.checkBoxPolicy);
     }
 
     public static void clickOnButtonSaveInformation() {
-        Common.clickOnElement(Locators.SkonisIrKvapas.Informacija.clickOnButtonSaveInformation);
+        Common.clickOnElement(Locators.SkonisIrKvapas.Informacija.saveCustomer);
     }
 }

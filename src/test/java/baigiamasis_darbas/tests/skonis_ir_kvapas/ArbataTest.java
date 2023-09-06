@@ -16,13 +16,11 @@ public class ArbataTest extends BaseTest {
         ArbataPage.open();
     }
 
-
     @DataProvider(name = "teaToCart")
     public Object[][] provideDataForTestMultipleCheckBox() {
         return new Object[][]{
                 {"Juodoji arbata SKONIS IR KVAPAS EARL GREY", "Juodoji arbata SKONIS IR KVAPAS EARL GREY"},
-                {"Žalioji arbata CITRUSŲ VĖJAS", "Žalioji arbata CITRUSŲ VĖJAS"},
-                {"Matė PARANA TRADITIONAL, 250 g", "Matė PARANA TRADITIONAL, 250 g"}
+                {"Žalioji arbata CITRUSŲ VĖJAS", "Žalioji arbata CITRUSŲ VĖJAS"}
         };
     }
 

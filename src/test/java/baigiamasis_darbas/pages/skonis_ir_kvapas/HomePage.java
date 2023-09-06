@@ -22,16 +22,16 @@ public class HomePage {
     }
 
     public static void inputIeskoti(String text) {
-        Common.sendKeysToElement(Locators.SkonisIrKvapas.HomePage.inputItemsSearch, text);
+        Common.sendKeysToElement(Locators.SkonisIrKvapas.HomePage.itemsSearch, text);
     }
 
     public static void clickOnPaieska() {
-        Common.clickOnElement(Locators.SkonisIrKvapas.HomePage.clickOnSearchButton);
+        Common.clickOnElement(Locators.SkonisIrKvapas.HomePage.buttonSearch);
     }
 
     public static boolean checkSearchResults(List<String> searchResultCriteria) {
-        Common.waitForElementToBeVisible(Locators.SkonisIrKvapas.HomePage.itemsOfSearchResults);
-        List<String> searchResults = Common.getSearchResults(Locators.SkonisIrKvapas.HomePage.itemsOfSearchResults);
+        Common.waitForElementToBeVisible(Locators.SkonisIrKvapas.HomePage.productList);
+        List<String> searchResults = Common.getSearchResults(Locators.SkonisIrKvapas.HomePage.productList);
 
         for (String result : searchResults) {
             if (compareResults(result, searchResultCriteria)){
@@ -51,6 +51,6 @@ public class HomePage {
     }
 
     public static void clickOnManoPaskyra() {
-        Common.clickOnElement(Locators.SkonisIrKvapas.HomePage.clickOnManoPaskyra);
+        Common.clickOnElement(Locators.SkonisIrKvapas.HomePage.paragraphManoPaskyra);
     }
 }

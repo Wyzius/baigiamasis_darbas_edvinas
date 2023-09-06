@@ -16,8 +16,8 @@ public class PrisijungimasPage {
     }
 
     public static void inputVardasRegister(String text) {
-        Common.waitForElementToBeVisible(Locators.SkonisIrKvapas.Prisijungimas.inputName);
-        Common.sendKeysToElement(Locators.SkonisIrKvapas.Prisijungimas.inputName, text);
+        Common.waitForElementToBeVisible(Locators.SkonisIrKvapas.Prisijungimas.inputFirstName);
+        Common.sendKeysToElement(Locators.SkonisIrKvapas.Prisijungimas.inputFirstName, text);
     }
 
     public static void inputPavardeRegister(String text) {
@@ -33,16 +33,16 @@ public class PrisijungimasPage {
     }
 
     public static void clickOnRegisterCheckBox() {
-        Common.clickOnElement(Locators.SkonisIrKvapas.Prisijungimas.clickOnCheckBoxPolicy);
+        Common.clickOnElement(Locators.SkonisIrKvapas.Prisijungimas.checkboxPolicyRegister);
     }
 
     public static void clickOnIssaugoti() {
-        Common.clickOnElement(Locators.SkonisIrKvapas.Prisijungimas.clickOnSaveCustomer);
+        Common.clickOnElement(Locators.SkonisIrKvapas.Prisijungimas.saveCustomer);
     }
 
     public static String getAlert() {
-        Common.waitForElementToBeVisible(Locators.SkonisIrKvapas.Prisijungimas.getAlertDanger);
-        return Common.getTextFromElement(Locators.SkonisIrKvapas.Prisijungimas.getAlertDanger);
+        Common.waitForElementToBeVisible(Locators.SkonisIrKvapas.Prisijungimas.messageBlock);
+        return Common.getTextFromElement(Locators.SkonisIrKvapas.Prisijungimas.messageBlock);
     }
 
     public static void inputPastasLogin(String text) {
@@ -54,12 +54,12 @@ public class PrisijungimasPage {
     }
 
     public static void clickOnButtonLogin() {
-        Common.clickOnElement(Locators.SkonisIrKvapas.Prisijungimas.clickOnButtonSubmitLogin);
+        Common.clickOnElement(Locators.SkonisIrKvapas.Prisijungimas.submitLogin);
     }
 
     public static String getManoPaskyra() {
-        Common.waitForElementToBeVisible(Locators.SkonisIrKvapas.Prisijungimas.getTextMyAccount);
-        return Common.getTextFromElement(Locators.SkonisIrKvapas.Prisijungimas.getTextMyAccount);
+        Common.waitForElementToBeVisible(Locators.SkonisIrKvapas.Prisijungimas.paragraphManoPaskyra);
+        return Common.getTextFromElement(Locators.SkonisIrKvapas.Prisijungimas.paragraphManoPaskyra);
     }
 
     public static void login() {
@@ -68,6 +68,6 @@ public class PrisijungimasPage {
 
         Common.sendKeysToElement(Locators.SkonisIrKvapas.Prisijungimas.inputEmailLogin, email);
         Common.sendKeysToElement(Locators.SkonisIrKvapas.Prisijungimas.inputPasswordLogin, password);
-        Common.clickOnElement(Locators.SkonisIrKvapas.Prisijungimas.clickOnButtonSubmitLogin);
+        Common.clickOnElement(Locators.SkonisIrKvapas.Prisijungimas.submitLogin);
     }
 }
