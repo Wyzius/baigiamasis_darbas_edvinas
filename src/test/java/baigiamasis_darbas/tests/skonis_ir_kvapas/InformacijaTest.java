@@ -24,7 +24,7 @@ public class InformacijaTest extends BaseTest {
         ManoPaskyraPage.clickOnInformacija();
     }
 
-    @DataProvider(name = "addFirtandLastNames")
+    @DataProvider(name = "addFirstAndLastNames")
     public Object[][] provideDataFirstAndLastNames(){
         return new Object[][]{
                 {"Petras", "Petraitis", "Informacija atnaujinta."},
@@ -33,7 +33,7 @@ public class InformacijaTest extends BaseTest {
         };
     }
 
-    @Test(dataProvider = "addFirtandLastNames")
+    @Test(dataProvider = "addFirstAndLastNames")
     public void testChangeUserNameAndLastName(String firstName, String lastName, String expectedResult){
         String slaptazodis = "slaptazodis123";
         String actualResult;

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation test" parallel="methods" thread-count="6">
+    <test name="SkonisIrKvapas">
+        <classes>
+            <class name="baigiamasis_darbas.tests.skonis_ir_kvapas.PrisijungimasTest"/>
+            <class name="baigiamasis_darbas.tests.skonis_ir_kvapas.InformacijaTest"/>
+            <class name="baigiamasis_darbas.tests.skonis_ir_kvapas.HomeTest"/>
+            <class name="baigiamasis_darbas.tests.skonis_ir_kvapas.ArbataTest"/>
+        </classes>
+    </test>
+</suite>
