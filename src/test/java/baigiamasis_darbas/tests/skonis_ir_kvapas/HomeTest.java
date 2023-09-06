@@ -26,7 +26,6 @@ public class HomeTest extends BaseTest {
 
         HomePage.inputIeskoti(searchValue);
         HomePage.clickOnPaieska();
-
         actualResult = HomePage.checkSearchResults(searchResultCriteria);
 
         Assert.assertTrue(actualResult);
