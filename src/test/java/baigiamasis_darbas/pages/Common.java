@@ -23,6 +23,10 @@ public class Common {
         Driver.quitWebDriver();
     }
 
+    public static void clearElementKeys(By locator){
+        getElement(locator).clear();
+    }
+
     public static WebElement getElement(By locator) {
         return Driver.getInstance().findElement(locator);
     }
@@ -45,6 +49,11 @@ public class Common {
 
     public static boolean isElementVisible(By locator) {
         return getElement(locator).isDisplayed();
+    }
+
+    public static void waitForElementToBeClickable(By locator) {
+        WebDriverWait wait = new WebDriverWait(Driver.getInstance(), Duration.ofSeconds(8));
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
     public static void waitForElementToBeVisible(By locator) {
@@ -74,7 +83,7 @@ public class Common {
         List<String> searchResults = new ArrayList<>();
 
         for (WebElement element : elements){
-            searchResults.add(element.getText().toLowerCase());
+            searchResults.add(element.getText().toUpperCase());
         }
 
         return searchResults;

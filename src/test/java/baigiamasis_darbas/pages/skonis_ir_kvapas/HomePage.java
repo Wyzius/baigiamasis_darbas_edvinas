@@ -49,4 +49,8 @@ public class HomePage {
         }
         return true;
     }
+
+    public static void clickOnManoPaskyra() {
+        Common.clickOnElement(Locators.SkonisIrKvapas.HomePage.clickOnManoPaskyra);
+    }
 }

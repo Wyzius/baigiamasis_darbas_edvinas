@@ -20,8 +20,8 @@ public class HomeTest extends BaseTest {
 
     @Test
     public void testSearchBoxRooibos(){
-        String searchValue = "Rooibos";
-        List<String> searchResultCriteria = Arrays.asList("Rooibos");
+        String searchValue = "rooibos";
+        List<String> searchResultCriteria = Arrays.asList("rooibos");
         boolean actualResult;
 
         HomePage.inputIeskoti(searchValue);

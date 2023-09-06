@@ -61,4 +61,13 @@ public class PrisijungimasPage {
         Common.waitForElementToBeVisible(Locators.SkonisIrKvapas.Prisijungimas.getTextMyAccount);
         return Common.getTextFromElement(Locators.SkonisIrKvapas.Prisijungimas.getTextMyAccount);
     }
+
+    public static void login() {
+        String email = "auto.testas.edvinas@gmail.com";
+        String password = "slaptazodis123";
+
+        Common.sendKeysToElement(Locators.SkonisIrKvapas.Prisijungimas.inputEmailLogin, email);
+        Common.sendKeysToElement(Locators.SkonisIrKvapas.Prisijungimas.inputPasswordLogin, password);
+        Common.clickOnElement(Locators.SkonisIrKvapas.Prisijungimas.clickOnButtonSubmitLogin);
+    }
 }

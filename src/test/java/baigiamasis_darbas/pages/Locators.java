@@ -58,9 +58,13 @@ public class Locators {
                     "//form[@id='search_widget']//button[@aria-label='Paieška']");
 
             public static By itemsOfSearchResults = By.xpath("//div[@id='js-product-list']");
+
+            public static By clickOnManoPaskyra = By.xpath(
+                    "//div[@class='hidden lg:flex']//a[contains(text(),'Mano paskyra')]"
+            );
         }
 
-        public static class Arbata {
+        public class Arbata {
             public static By clickOnCategoryCheckbox = By.xpath(
                     "//ul[@class='checkbox-filter']//label[contains(text(),'Ulongo arbata')]");
 
@@ -69,6 +73,7 @@ public class Locators {
             public static By addItem = By.xpath(
                     "//div[@class='add w-full']//button[@aria-label='Į krepšelį']"
             );
+
             public static By waitForDialog = By.xpath("//div[@class='modal-footer flex justify-between']");
 
             public static By moveToPayment = By.xpath(
@@ -82,13 +87,35 @@ public class Locators {
                         (String.format("//h2[@class='products__item-title' and contains(text(),'%s')]",item)
                         );
             }
-
             public static By cartItemName(String item) {
                 return By.xpath
                         (String.format
                                 ("//h2[@class='cart-table__body-title hidden lg:block ok' and contains(text(),'%s')]",item)
                         );
             }
+        }
+
+        public class ManoPaskyra {
+
+            public static By clickOnCloseTab = By.xpath("//button[@aria-label='Close']");
+            public static By clickOnInformacija = By.xpath("//a[@id='identity-link']");
+        }
+
+        public class Informacija {
+
+            public static By readAlert = By.xpath("//article[@class='alert alert-success']");
+
+            public static By inputFirstName = By.xpath("//input[@name='firstname']");
+
+            public static By inputLastName = By.xpath("//input[@name='lastname']");
+
+            public static By inputPassword = By.xpath("//input[@type='password'][1]");
+
+            public static By clickOnCheckboxPolicy = By.xpath("//input[@name='psgdpr']");
+
+            public static By clickOnButtonSaveInformation = By.xpath(
+                    "//button[@data-link-action='save-customer']"
+            );
         }
     }
 }
